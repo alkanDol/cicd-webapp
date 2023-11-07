@@ -9,7 +9,7 @@ let db;
 export async function initialize() {
   if (!fs.existsSync('./database')) {
     fs.mkdirSync('./database');
-  };
+  }
 
   db = await open({
     filename: './database/database.sqlite',
