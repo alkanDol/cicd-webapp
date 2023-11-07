@@ -9,12 +9,13 @@ let db;
 export async function initialize() {
   if (!fs.existsSync('./database')) {
     fs.mkdirSync('./database');
-  }
+  };
 
   db = await open({
     filename: './database/database.sqlite',
     driver: sqlite3.Database
   });
+  
 
   await db.exec('CREATE TABLE IF NOT EXISTS animal(id INTEGER PRIMARY KEY, name TEXT)');
 
