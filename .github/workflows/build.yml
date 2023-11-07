@@ -11,18 +11,15 @@ jobs:
 
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4  # Use the actions/checkout@v2 action to check out the repository code
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3  # Use the setup-node action to set up Node.js
         with:
           node-version: 18
 
       - name: Install Dependencies
-        run: yarn install
-
-      - name: Change to the project directory
-        run: dockerlab/webapp 
+        run: yarn install  # Use the run action to execute 'yarn install'
 
       - name: Lint the Project
-        run: yarn lint
+        run: yarn lint  # Use the run action to execute 'yarn lint'
