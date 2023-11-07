@@ -13,7 +13,7 @@ export async function initialize() {
 
   db = await open({
     filename: './database/database.sqlite',
-    driver: sqlite3.Database
+    driver: sqlite3.Database,
   });
   
 
