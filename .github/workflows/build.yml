@@ -22,7 +22,7 @@ jobs:
         run: yarn install  # Use the run action to execute 'yarn install'
       
       - name: Install ESLint Globally
-      run: yarn global add eslint
+        run: yarn global add eslint
 
       - name: Lint the Project
         working-directory: ./dockerlab/webapp
