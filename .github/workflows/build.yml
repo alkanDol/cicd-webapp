@@ -27,6 +27,9 @@ jobs:
       - name: Install Mocha Globally
         run: yarn global add mocha
 
+      - name: Install chai Globally
+        run: yarn global add chai
+
       - name: Lint the Project
         working-directory: ./dockerlab/webapp
         run: yarn lint  
