@@ -1,0 +1,31 @@
+version: '3'
+services:
+  webapp:
+    build: .
+    image: webapp
+    ports:
+      - "3000:3000"
+    volumes:
+      - /vagrant/webapp/database:/app/database
+    environment:
+      MONGO_URL: "mongodb://database:27017/myappdb"
+    depends_on:
+      - database
+
+  database:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  test:
+    image: webapp
+    depends_on:
+      - webapp
+    environment:
+      API_URL: "http://webapp:3000"  
+    command: ["yarn", "test"]
+
+volumes:
+  mongo-data:
