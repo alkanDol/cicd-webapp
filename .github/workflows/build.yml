@@ -22,4 +22,5 @@ jobs:
         run: yarn install  # Use the run action to execute 'yarn install'
 
       - name: Lint the Project
+        working-directory: cicd-webapp/dockerlab/webapp
         run: yarn lint  # Use the run action to execute 'yarn lint'
