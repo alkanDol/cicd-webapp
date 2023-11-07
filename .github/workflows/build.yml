@@ -11,15 +11,15 @@ jobs:
 
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v3  # Use the actions/checkout@v2 action to check out the repository code
+        uses: actions/checkout@v3 
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3  # Use the setup-node action to set up Node.js
+        uses: actions/setup-node@v3  
         with:
           node-version: 18
 
       - name: Install Dependencies
-        run: yarn install  # Use the run action to execute 'yarn install'
+        run: yarn install  
       
       - name: Install ESLint Globally
         run: yarn global add eslint
