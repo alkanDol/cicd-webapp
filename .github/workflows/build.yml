@@ -39,4 +39,4 @@ jobs:
         run: |
           docker build -t alkdol/webapp:latest .
           docker push alkdol/webapp:latest
-        working-directory: cicd-webapp/dockerlab/webapp
+        working-directory: ./dockerlab/webapp
