@@ -31,7 +31,6 @@ jobs:
         run: yarn global add chai
 
       - name: Lint the Project
-        working-directory: ./webapp
         run: yarn lint  
 
      # - name: Run Tests
@@ -55,4 +54,4 @@ jobs:
         run: |
           docker build -t alkdol/webapp:latest .
           docker push alkdol/webapp:latest
-        working-directory: ./webapp
+        
